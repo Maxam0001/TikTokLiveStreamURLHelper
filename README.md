@@ -16,4 +16,7 @@ just click on the browser's navigation bar and hit ENTER. This should reload the
 Since TikTok changes their code frequently, this functionality will probably break often. In the meantime, 
 enjoy it while it works.
 
+9/4 Update - TikTok isn't leaking the HLS stream URL anymore, so we're stuck with using the FLV stream instead.
+
+
 - Maxam
