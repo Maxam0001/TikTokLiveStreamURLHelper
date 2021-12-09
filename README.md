@@ -17,6 +17,6 @@ Since TikTok changes their code frequently, this functionality will probably bre
 enjoy it while it works.
 
 9/4 Update - TikTok isn't leaking the HLS stream URL anymore, so we're stuck with using the FLV stream instead.
-
+12/10 Update - Fix for some huge changes TikTok made that broke the script. Luckily, the HLS stream is accessible again. 
 
 - Maxam
