@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        TikTok Live Stream URL Helper
-// @version     1.2
+// @version     1.3
 // @grant       none
 // @match				https://www.tiktok.com/@*/live*
 // @run-at      document-end
@@ -42,14 +42,21 @@ async function fetchRoomInfo(roomId) {
 
 function hookToolsMenu() {  
   try {
-    //if the "Get Stream URL" button doesn't doesn't exist, create it, else rehook and exit
-    var shareButton=document.getElementsByClassName('tiktok-1i4rtt3-AShareLink')[0]; 
+  
+    //if the Share flyout doesn't exist, exit and try again after half a second
+    var shareButton=document.getElementsByClassName('e1xuf8h00')[0].firstChild; 
+    if (!shareButton) {
+      setTimeout(hookToolsMenu, 500);
+      return;
+    }
+   
+		//if the flyout exists but we've already added our new entry, just exit and rehook  
     if (shareButton.innerText=="Get Stream URL") {
     	setTimeout(hookToolsMenu, 500);  
       return;
     }
     
-    //create a new "Get Stream URL" item before it
+    //We don't have our entry in the flyout, so clone the first link and make our "Get Stream URL" item before it
     var streamUrlButton=shareButton.cloneNode(true);
     copyButton=streamUrlButton;
     shareButton.parentElement.insertBefore(streamUrlButton,shareButton); 
@@ -75,8 +82,5 @@ function hookToolsMenu() {
   }
 }
 
+//entry point
 setTimeout(hookToolsMenu, 500);
-
-
-
-    
