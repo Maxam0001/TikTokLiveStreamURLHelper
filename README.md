@@ -10,7 +10,7 @@ copy and use however you want.
 Since TikTok changes their code frequently, this functionality will probably break often. In the meantime, 
 enjoy it while it works.
 
-9/4 Update - TikTok isn't leaking the HLS stream URL anymore, so we're stuck with using the FLV stream instead.
-12/10 Update - Fix for some huge changes TikTok made that broke the script. Luckily, the HLS stream is accessible again. 
-
+9/4/21 Update - TikTok isn't leaking the HLS stream URL anymore, so we're stuck with using the FLV stream instead.
+12/10/21 Update - Fix for some huge changes TikTok made that broke the script. Luckily, the HLS stream is accessible again. 
+03/27/23 Update - Fix for changes in the dynamic HTML that TikTok uses for the Share flyout that we hook into.
 - Maxam
