@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        TikTok Live Stream URL Helper
-// @version     1.3
+// @version     1.4
 // @grant       none
 // @match				https://www.tiktok.com/@*/live*
 // @run-at      document-end
